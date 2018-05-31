@@ -10,7 +10,7 @@ Free energy learning materials.
 http://www.alchemistry.org/wiki/Main_Page  
 https://github.com/MobleyLab/FreeSolv 
 
-Usage:  
+Usage:  testfreesol.py  
   
     # _*_ coding: utf-8 _*_
 
