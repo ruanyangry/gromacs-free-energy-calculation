@@ -10,6 +10,31 @@ Free energy learning materials.
 http://www.alchemistry.org/wiki/Main_Page  
 https://github.com/MobleyLab/FreeSolv 
 
+Python code  
+
+GenerateFF.py: Generated organics molecules GAFF force field.
+     
+     function: loadData(): Load molecule smi format file.  
+               Smi2mol2(): Use openbabel python library pybel convert smi to .mol2.
+               readmol2(): Read mol2 file get the molecule mol mass.
+               nmolecule(): Calculated the number of molecules packed into the box. (default mass density=1000.0 kg.m3)
+               Packmolinputfile(): Write PACKMOL input file.
+               acpypeantechamber(): Generated acpypeantechamber.sh file.
+               GaussianAntechamber: Generated GaussianAntechamber.sh file.  
+               
+freesolmdp.py: Generated Steepest descents minimization,L-BFGS minimization,NVT equilibration,  
+               NPT equilibration and Data collection under an NPT ensemble .mdp file.  
+               
+      function: Femdp(): Write .mdp file.
+      
+gmxtop.py: Modified .top file, changed organic atom charge to zero.
+
+      function: topfreesol(): used to generated gromacs free energy calculated .top file and make each atom chrage == 0.0.  
+      
+freesolsh.py: Generated HPC task management system input file (shell file).
+
+      function: fsolsh(): Generated free energy workflow shell file.  
+      
 Usage:  testfreesol.py  
   
     # _*_ coding: utf-8 _*_
