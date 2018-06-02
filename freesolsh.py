@@ -33,7 +33,6 @@ def fsolsh(nstates,name,nt):
 			f.write('#$ -pe thread %d-%d\n'%(nt,nt))
 			f.write('source ~/.bashrc\n')
 			f.write('hash -r\n')
-			f.write('export PATH=/export/home/ry/gromacs-5.0/bin:PATH\n')
 			f.write('\n')
 			f.write("\n")
 			f.write("# Author: Ruan Yang\n")
