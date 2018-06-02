@@ -24,6 +24,7 @@ GenerateFF.py: Generated organics molecules GAFF force field.
                
 freesolmdp.py: Generated Steepest descents minimization,L-BFGS minimization,NVT equilibration,  
                NPT equilibration and Data collection under an NPT ensemble .mdp file.  
+               like write_mdp.pl (http://www.bevanlab.biochem.vt.edu/Pages/Personal/justin/gmx-tutorials/free_energy/Files/write_mdp.txt)  
                
       function: Femdp(): Write .mdp file.
       
@@ -31,7 +32,8 @@ gmxtop.py: Modified .top file, changed organic atom charge to zero.
 
       function: topfreesol(): used to generated gromacs free energy calculated .top file and make each atom chrage == 0.0.  
       
-freesolsh.py: Generated HPC task management system input file (shell file).
+freesolsh.py: Generated HPC task management system input file (shell file).  
+              like write_sh.pl (http://www.bevanlab.biochem.vt.edu/Pages/Personal/justin/gmx-tutorials/free_energy/Files/write_sh.txt)  
 
       function: fsolsh(): Generated free energy workflow shell file.  
       
