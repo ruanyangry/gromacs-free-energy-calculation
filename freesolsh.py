@@ -33,6 +33,7 @@ def fsolsh(nstates,name,nt):
 			f.write('#$ -pe thread %d-%d\n'%(nt,nt))
 			f.write('source ~/.bashrc\n')
 			f.write('hash -r\n')
+			#f.write('export PATH=/export/home/ry/gromacs-5.0/bin:PATH\n')
 			f.write('\n')
 			f.write("\n")
 			f.write("# Author: Ruan Yang\n")
@@ -103,3 +104,14 @@ def fsolsh(nstates,name,nt):
 				f.write("\n")
 				f.write("cd ../../../\n")
 				f.write("\n")
+				f.write("cd molStructure/mobley_5857/FE\n")
+				f.write("mkdir analysis\n")
+				for i in range(nstates):
+					f.write("cd pd-%d\n"%(i))
+					f.write("mv pd.xvg pd-%d.xvg\n"%(i))
+					f.write("cp pd-%d.xvg ../analysis\n")
+				f.write("cd analysis\n")
+				f.write("echo 'gmx bar analysis'\n")
+				f.write("gmx bar -f pd-*.xvg -o %s-bar.xvg -oi %s-barint.xvg \
+				-oh %s-histogram.xvg \n")
+				f.write("echo 'Analysis done'\n")
