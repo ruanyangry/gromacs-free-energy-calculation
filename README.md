@@ -22,9 +22,9 @@ GenerateFF.py: Generated organics molecules GAFF force field.
                acpypeantechamber(): Generated acpypeantechamber.sh file.
                GaussianAntechamber: Generated GaussianAntechamber.sh file.  
                
-freesolmdp.py: Generated Steepest descents minimization,L-BFGS minimization,NVT equilibration,  
-               NPT equilibration and Data collection under an NPT ensemble .mdp file.  
-               like write_mdp.pl (http://www.bevanlab.biochem.vt.edu/Pages/Personal/justin/gmx-tutorials/free_energy/Files/write_mdp.txt)  
+freesolmdp.py: Generated Steepest descents minimization,L-BFGS minimization,NVT equilibration, \
+NPT equilibration and Data collection under an NPT ensemble .mdp file.  \
+like write_mdp.pl (http://www.bevanlab.biochem.vt.edu/Pages/Personal/justin/gmx-tutorials/free_energy/Files/write_mdp.txt)  
                
       function: Femdp(): Write .mdp file.
       
