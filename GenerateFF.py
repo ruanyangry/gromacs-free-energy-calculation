@@ -358,7 +358,7 @@ def GaussianAntechamber(molname,nmol,basisset='#HF/6-31G*',data='off',freesol="o
 		f.write('echo "#-----------------------------------------------------------#"\n')
 		f.write('echo "Step 6: Using acpype.py get GROMACS topology and coordinate file."\n')
 		f.write('echo "#-----------------------------------------------------------#"\n')
-		f.write('python2 ../../acpype.py -p %s.prmtop -x %s.inpcrd -d\n'%(molname,molname)) 
+		f.write('python2 ../../acpype.py -p %s.prmtop -x %s.inpcrd -c user -n 0 -d\n'%(molname,molname)) 
 		f.write(' \n')
 		f.write('echo "#-----------------------------------------------------------#"\n')
 		f.write('echo "Step 7: Using packmol get the packed coordinate."\n')
